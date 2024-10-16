@@ -1,0 +1,86 @@
+/* banner.component.css */
+
+.banner-section {
+  position: relative;
+  text-align: left;
+  overflow: hidden;
+  margin-top: 0.3rem;
+  background: linear-gradient(
+    to bottom right,
+    var(--cor-primaria),
+    var(--cor-fundo-alternativa)
+  );
+  border-radius: 16px 16px 0 0;
+  padding: 30px 0; /* Ajuste o padding conforme necessário */
+}
+
+.banner-content {
+  display: flex;
+  align-items: center; /* Alinha verticalmente */
+  justify-content: space-between; /* Distribui o espaço entre texto e imagem */
+  max-width: 1200px;
+  margin: 0 auto; /* Centraliza o container */
+  padding: 0 20px; /* Adicione um espaçamento interno */
+}
+
+.text-container {
+  color: white;
+  flex: 1; /* Ocupa o espaço disponível */
+  margin-right: 20px; /* Espaçamento entre texto e imagem */
+}
+
+.image-container {
+  width: 50%; /* Ocupa o espaço disponível */
+}
+
+.img-fluid {
+  clip-path: ellipse(80% 70% at 50% 30%);
+  width: 100%; /* A imagem ocupa 100% do container */
+  height: auto;
+}
+
+.slogan {
+  font-family: Raleway;
+  font-size: 3em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.btn {
+  text-decoration: none;
+  background-color: var(--cor-secundaria);
+  width: fit-content;
+  color: var(--cor-fundo-alternativa);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  color: var(--cor-texto-primaria);
+  transition-delay: 0.1s;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .banner-content {
+    flex-direction: column; /* Texto acima da imagem em telas menores */
+    text-align: center; /* Centraliza o texto */
+  }
+
+  .image-container {
+    order: -1; /* Coloca a imagem acima do texto */
+    margin-bottom: 20px;
+  }
+
+  .slogan {
+    font-size: 2em;
+  }
+
+  .text-container {
+    margin-right: 0;
+  }
+}
